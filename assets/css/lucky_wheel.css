@@ -1,0 +1,135 @@
+@font-face {
+    font-family: bachtuyet;
+    src: url(../fonts/UVNBACHTUYET.TTF);
+}
+#behind_roll {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 100000;
+    top: 0
+}
+
+#roll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 100001;
+    background-image: url(../imgs/bg.jpg);
+    background-size: cover;
+    
+}
+#roll .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    z-index: 100;
+}
+#roll #getPhone {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+#roll #getPhone input {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    background-color: #fff;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}
+
+#roll #getPhone button {
+    font-family: Georgia,'Times New Roman',Times,serif;
+    width: 100%;
+    background-color: #ffc445;
+    border-color: #002928;
+    border-radius: 5px;
+    color: #000;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}
+.swal2-icon-show {
+    display: none !important;
+}
+.swal2-title{
+    color:#013a40;
+    text-transform: uppercase;
+}
+#codeWrapper{
+    border: 1px solid #013a40;
+    border-radius: 5px;
+    padding: 10px 0;
+    color:#013a40;
+}
+#codeWrapper .code{
+    font-size: 30px;
+    font-weight: bold;
+}
+#codeWrapper p {
+    margin: 0;
+}
+#codeWrapper hr{
+    border-style: dashed;
+}
+#codeWrapper .infoCode{
+    color: red
+}
+#codeGuild{
+    color: #013a40;
+}
+#codeGuild div{
+    margin: 10px
+}
+#codeGuild p{
+    text-align: left;
+}
+#codeGuild p a{
+    text-decoration: none;
+    color: red;
+}
+@media only screen and (min-width: 601px) {
+    #roll {
+        width: 900px;
+    }
+    #roll #getPhone {
+        width: 400px;
+        padding: 20px;
+    }
+}
+@media only screen and (max-width: 601px) {
+    #roll {
+        flex-wrap: wrap;
+    }
+    #roll #getPhone {
+        width: 100%;
+    }
+	#roll #getPhone h2{
+		font-size: 27px;
+	}
+	
+	#roll #getPhone h4{
+		margin: 5px 0 5px;
+    	font-size: 25px;
+	}
+}
