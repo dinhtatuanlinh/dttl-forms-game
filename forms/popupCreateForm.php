@@ -15,7 +15,7 @@ class DttlCreatePopupForm {
     }
     // phải sử dụng jquery để thực thi ajax
     public function script_tags(){
-        echo __METHOD__;
+        // echo __METHOD__;
         ?>
             <script defer>
                 function setCookieLinh(cname, cvalue, exdays) {
