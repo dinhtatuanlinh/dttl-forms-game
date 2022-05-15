@@ -23,6 +23,8 @@ define('DTTL_FORM_MENUS_DIR', DTTL_FORM_PLUGIN_DIR . 'menus/');
 define('DTTL_FORM_FORMS_DIR', DTTL_FORM_PLUGIN_DIR . 'forms/');
 define('DTTL_FORM_FORMS_URL', DTTL_FORM_PLUGIN_URL . 'forms/');
 define('DTTL_FORM_LIBS_DIR', DTTL_FORM_PLUGIN_DIR . 'libs/');
+define('DTTL_METABOX_PRODUCT_DIR', DTTL_FORM_PLUGIN_DIR . 'metabox/');
+
 if(!is_admin()){
     // kiêm tra xem đã bật form chưa nếu rồi thì cho hiện form
     // giá trị này được lưu trong bảng options với option name là dttl_form_setting['dttl_enable_form']
@@ -41,11 +43,15 @@ if(!is_admin()){
     
 }else{
     require_once DTTL_FORM_LIBS_DIR . 'html.php';
+
     require_once DTTL_FORM_MENUS_DIR . 'menu_dashboard.php';
     new dttl_menu_dashboard();
+
     require_once DTTL_FORM_MENUS_DIR . 'popupMenu.php';
     new dttl_popup_dashboard();
-    
+
+    require_once DTTL_METABOX_PRODUCT_DIR . 'main.php';
+    new dttl_metabox_product();
 }
 
 $options = get_option('dttl_form_game_settings', false);
